@@ -7,74 +7,69 @@
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Bin Yuan}
+\name{Zhang Qianhao}
 
 \basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+  \email{qianhaoz@andrew.cmu.edu} \textperiodcentered\ 
+  \phone{(+1) 510-993-4360} \textperiodcentered\ 
+  \linkedin[qianhaoz]{https://www.linkedin.com/in/qianhaoz/} \textperiodcentered\ 
+  \github[jasonlovescoding]{https://github.com/jasonlovescoding}}
 
 \section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
+\datedsubsection{\textbf{Carnegie Mellon University - School of Computer Science}}{Pittsburgh, PA}
+\datedsubsection{\textit{M.S.} in Computer Vision | Current GPA: 4.22/4.3}{Dec. 2020}
+\datedsubsection{\textbf{Beihang University - School of Computer Science and Engineering}}{Beijing, China}
+\datedsubsection{\textit{B.Eng.} in Computer Science and Technology | GPA: 3.78/4, Graduation with Honors}{Jul. 2019}
+\datedsubsection{\textbf{University of Toronto - Faculty of Applied Science and Engineering}}{Toronto, ON}
+\datedsubsection{Scholarship-Funded Exchange Program | GPA: 3.88/4}{Dec. 2017}
 
-\section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
+\section{\faBook\ Academic Projects}
+
+\datedsubsection{\textbf{\href{https://mscvprojects.ri.cmu.edu/2020teamn/}{Image-Based Localization for Autonomous Drones \faExternalLink\ }}}{Pittsburgh, PA}
+\datedsubsection{\textit{Carnegie Mellon University} | Supervised by Prof. John Galeotti}{Feb. 2020 - May. 2020}
+Exploration on deep-learning-based scene coordinate regression for visual relocalization in aerial environments
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Implemented a VGG-style network for scene coordinate regression and relocalizaition 
+  \item Increased the precision with structure-from-known motion and differentiable ensemble method  
+  \item Tested the relocalization module with km-level flight by drones and achieved sub-meter, sub-degree error
 \end{itemize}
 
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
+\datedsubsection{\textbf{\href{https://arxiv.org/abs/1811.09938}{Convolutional Neural Network as Loop Closure Detector \faExternalLink\ }}}{Berkeley, CA}
+\datedsubsection{\textit{University of California, Berkeley} | Supervised by Dr. Allen Yang}{Jul. 2018 - Oct. 2018}
+Improvement on Visual-Inertial SLAM and exploration on deep-learning-based loop closure detection
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Implemented a feature-pyramid Siamese network in pytorch for loop closure detection 
+  \item Synthesized a large-scale indoor environment dataset with Unity3D and SunCG for training and testing
+  \item Improved the stability of OKVIS on Intel D435i camera with ICP algorithm for texture-sparse frames
 \end{itemize}
 
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
+\section{\faSuitcase\ Professional Experiences}
+
+\datedsubsection{\textbf{SenseBrain Technology LLC}}{San Jose, CA}
+\datedsubsection{\textit{Research Intern} | Mentored by Jiang Jun and Prof. Gu Jinwei}{May. 2020 - Aug. 2020}
+Efficiency study on the remosaic and demosaic tasks for quad-bayer photometric sensors on smartphones
 \begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
+  \item Compressed the remosaic-net with 50\% less computation and original PSNR score for SONY 2x2 OCL
+  \item Quantized demosaic-net in 8-bit and 16-bit quantization-aware training with minimal performance loss
+  \item Deployed the quantized/compressed models on the DSP/CPU of an Oppo Reno 2 and a google Pixel 3 
 \end{itemize}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
-
-\section{\faCogs\ Skills}
-\begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
-  \item Platform: Linux
-  \item Development: Web, xxx
+\datedsubsection{\textbf{SenseTime Co., Ltd.}}{Beijing, China}
+\datedsubsection{\textit{Research Intern} | Mentored by Yu Fengwei and Dr. Yan Junjie}{Feb. 2018 - Jul. 2019}
+Development of automated test-and-deploy tools, and high-efficiency inference frameworks
+\begin{itemize}
+  \item Created pytorch-onnx-caffe conversion package in Python, supporting all up-to-date neural layers
+  \item Maintained customized Caffe version in C++ with novel layers for internal research and test purposes
+  \item Developed the MKLDNN-based module for a node-based neural network inference framework in C, achieving state-of-the-art computational
+efficiency on Intel CPUs compared to PPL, Intel-Caffe and BVLC-Caffe
 \end{itemize}
 
-\section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
+\section{\faHeartO\ Awards and Certificates}
+\datedline{An Image Retrieval System Based on Natural Language Captioning, \href{http://www.xjishu.com/zhuanli/55/201910738598_3.html}{CN Patent 201910738598 \faExternalLink\ }}{Aug. 2019}
+\datedline{$1^{st}$ Winner with 10,000-RMB Prize, BeyondSoft Tech Challenge on Motion Evaluation}{Nov. 2018}
+\datedline{National Scholarship for Academic Excellency, Chinese Ministry of Education}{Nov. 2017}
 
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
-\end{itemize}
+\section{\faDesktop\ Skills}
+Python, C/C++; Computer Vision with Deep Learning; SLAM; High-Efficiency Deep Neural Networks
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
 \end{document}
