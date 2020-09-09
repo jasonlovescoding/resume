@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}[2015/05/25 An elegant Résumé class]
-\LoadClass[11pt]{article}
+\LoadClass[10pt]{article}
 
 % disable indent globally
 \setlength{\parindent}{0pt}
@@ -43,23 +43,23 @@
 \RequirePackage{enumitem}
 \setlist{noitemsep} % removes spacing from items but leaves space around the whole list
 %\setlist{nosep} % removes all vertical spacing within and around the list
-\setlist[itemize]{topsep=0.25em, leftmargin=1.5pc}
-\setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc}
+\setlist[itemize]{topsep=0.2em, leftmargin=1.5pc}
+\setlist[enumerate]{topsep=0.2em, leftmargin=1.5pc}
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
-  {\Large\scshape\raggedright} % Make the \section headers large (\Large),
+  {\large\scshape\raggedright} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
   [\titlerule]                 % Inserts a horizontal line after the heading
-\titlespacing*{\section}{0cm}{*1.8}{*1.8}
+\titlespacing*{\section}{0cm}{*1.}{*1.}
 
 \titleformat{\subsection}
-  {\large\raggedright}
+  {\normalsize\raggedright}
   {}{0em}
   {}
-\titlespacing*{\subsection}{0cm}{*1.8}{*0.6}
+\titlespacing*{\subsection}{0cm}{*1.}{*0.6}
 
 \newcommand{\datedsection}[2]{%
   \section[#1]{#1 \hfill #2}%
@@ -73,7 +73,7 @@
 
 \newcommand{\name}[1]{
   \centerline{\Huge\scshape{#1}}
-  \vspace{1.25ex}
+  \vspace{1.1ex}
 }
 
 % defines one's name
@@ -113,7 +113,7 @@
 
 \newcommand{\basicInfo}[1]{
   \centerline{\sffamily\large{#1}}
-  \vspace{1.5ex}
+  \vspace{1.2ex}
 }
 
 \newcommand{\role}[2]{

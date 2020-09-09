@@ -7,10 +7,10 @@
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Zhang Qianhao}
+\name{Qianhao ZHANG}
 
 \basicInfo{
-  \email{qianhaoz@andrew.cmu.edu} \textperiodcentered\ 
+  \email{zhangqianhao1408@gmail.com} \textperiodcentered\ 
   \phone{(+1) 510-993-4360} \textperiodcentered\ 
   \linkedin[qianhaoz]{https://www.linkedin.com/in/qianhaoz/} \textperiodcentered\ 
   \github[jasonlovescoding]{https://github.com/jasonlovescoding}}
@@ -23,53 +23,55 @@
 \datedsubsection{\textbf{University of Toronto - Faculty of Applied Science and Engineering}}{Toronto, ON}
 \datedsubsection{Scholarship-Funded Exchange Program | GPA: 3.88/4}{Dec. 2017}
 
-\section{\faBook\ Academic Projects}
-
-\datedsubsection{\textbf{\href{https://mscvprojects.ri.cmu.edu/2020teamn/}{Image-Based Localization for Autonomous Drones \faExternalLink\ }}}{Pittsburgh, PA}
-\datedsubsection{\textit{Carnegie Mellon University} | Supervised by Prof. John Galeotti}{Feb. 2020 - May. 2020}
-Exploration on deep-learning-based scene coordinate regression for visual relocalization in aerial environments
-\begin{itemize}
-  \item Implemented a VGG-style network for scene coordinate regression and relocalizaition 
-  \item Increased the precision with structure-from-known motion and differentiable ensemble method  
-  \item Tested the relocalization module with km-level flight by drones and achieved sub-meter, sub-degree error
-\end{itemize}
-
-\datedsubsection{\textbf{\href{https://arxiv.org/abs/1811.09938}{Convolutional Neural Network as Loop Closure Detector \faExternalLink\ }}}{Berkeley, CA}
-\datedsubsection{\textit{University of California, Berkeley} | Supervised by Dr. Allen Yang}{Jul. 2018 - Oct. 2018}
-Improvement on Visual-Inertial SLAM and exploration on deep-learning-based loop closure detection
-\begin{itemize}
-  \item Implemented a feature-pyramid Siamese network in pytorch for loop closure detection 
-  \item Synthesized a large-scale indoor environment dataset with Unity3D and SunCG for training and testing
-  \item Improved the stability of OKVIS on Intel D435i camera with ICP algorithm for texture-sparse frames
-\end{itemize}
-
 \section{\faSuitcase\ Professional Experiences}
 
 \datedsubsection{\textbf{SenseBrain Technology LLC}}{San Jose, CA}
-\datedsubsection{\textit{Research Intern} | Mentored by Jiang Jun and Prof. Gu Jinwei}{May. 2020 - Aug. 2020}
-Efficiency study on the remosaic and demosaic tasks for quad-bayer photometric sensors on smartphones
+\datedsubsection{\textit{Research Intern} | C++, Bash, Python}{May. 2020 - Aug. 2020}
+Compression and quantization of neural networks for camera-related CV tasks on smartphones
 \begin{itemize}
-  \item Compressed the remosaic-net with 50\% less computation and original PSNR score for SONY 2x2 OCL
-  \item Quantized demosaic-net in 8-bit and 16-bit quantization-aware training with minimal performance loss
-  \item Deployed the quantized/compressed models on the DSP/CPU of an Oppo Reno 2 and a google Pixel 3 
+  \item \textbf{50\%} channel-pruning compression of CNN to obtain fine-grained quad bayer captured by 2x2 on-chip lens (\href{https://www.sony-semicon.co.jp/e/products/IS/mobile/2_2_ocl.html}{\faExternalLink\ \textbf{product-link}}), enhanced the light-weight model (Python) for low-exposure frames with hard example fine-tuning
+  \item \textbf{5x speedup} of CNN for bayer demosaicking on Xiaomi phone's raw data, achieved by mixed-bitwidth (16-bit activation and 8-bit weight) quantization-aware training (Python) with AIMET toolbox
+  \item Developed the deployment pipeline for CNN models on smartphones (C++ and bash scripts), verified the model performance on the \textbf{DSP/CPU} of an Oppo Reno 2 and a google Pixel 3 with SNPE toolchain
 \end{itemize}
 
 \datedsubsection{\textbf{SenseTime Co., Ltd.}}{Beijing, China}
-\datedsubsection{\textit{Research Intern} | Mentored by Yu Fengwei and Dr. Yan Junjie}{Feb. 2018 - Jul. 2019}
-Development of automated test-and-deploy tools, and high-efficiency inference frameworks
+\datedsubsection{\textit{Research Intern} | C, C++, Python}{Feb. 2018 - Jul. 2019}
+Performance optimization and pipeline automation for deep learning frameworks and packages
 \begin{itemize}
-  \item Created pytorch-onnx-caffe conversion package in Python, supporting all up-to-date neural layers
-  \item Maintained customized Caffe version in C++ with novel layers for internal research and test purposes
-  \item Developed the MKLDNN-based module for a node-based neural network inference framework in C, achieving state-of-the-art computational
-efficiency on Intel CPUs compared to PPL, Intel-Caffe and BVLC-Caffe
+  \item Developed pytorch-onnx-caffe conversion and profiling package (Python) supporting \textbf{all neural network layers}, effectively bridged the gap between research teams (training) and engineering teams (deployment) 
+  \item Designed easy-to-use, modularized APIs that successfully worked with models within a wide variety such as pedestrian re-ID, face verification, car detection, etc. (number of users soon \textbf{exceeded 300} since first release in a month)
+  \item Implemented novel neural network layers (time-shift operation, correlation convolution, etc.) in Caffe (C++) with research teams, \textbf{halved the train-test-deploy response cycle of any new model} 
+  \item Developed inference framework (C) optimized for x86 processors with MKL-DNN, \textbf{2x speedup} compared to regular Caffe, used as deployment framework on development boards and light-weight chips
+\end{itemize}
+
+\section{\faBook\ Academic Projects}
+\datedsubsection{\textbf{\href{https://mscvprojects.ri.cmu.edu/2020teamn/}{Image-Based Localization for Autonomous Drones \faExternalLink\ project-link}}}{Pittsburgh, PA}
+\datedsubsection{\textit{Carnegie Mellon University} | Supervised by Prof. John Galeotti}{Feb. 2020 - May. 2020}
+Develop stateless relocalization module to fight the drifting problem in long-range flights
+\begin{itemize}
+  \item Implemented a fully convolutional neural network for scene coordinate regression, and applied \textbf{differentiable RANSAC with PnP algorithm} on scene coordinates for pose estimation
+  \item Leveraged GPS and structure-from-known-motion with OpenMVG to obtain \textbf{high-quality ground truth} for training
+  \item Averagely \textbf{<3m, <0.3° error} tested on 10-kilometer flight data, \textbf{<1m, <0.1° error} tested on 2-kilometer flight data
+\end{itemize}
+
+\datedsubsection{\textbf{\href{https://arxiv.org/abs/1811.09938}{Feature-Pyramid Siamese Network as Loop Closure Detector \faExternalLink\ arxiv-link}}}{Berkeley, CA}
+\datedsubsection{\textit{University of California, Berkeley} | Supervised by Dr. Allen Yang}{Jul. 2018 - Oct. 2018}
+Design loop closure detection module and improve localization module for the lost track problem in VR/AR scenarios
+\begin{itemize}
+  \item Designed a \textbf{feature-pyramid siamese network} for loop closure detection w/ comparable performance to ORB-SLAM
+  \item Synthesized a \textbf{large-scale} ($\sim$150,000 images) indoor environment dataset with Unity3D and SunCG for train \& test
+  \item Implemented \textbf{ICP algorithm} for OpenARK's SLAM module, stabilized the trajectory on texture-sparse frames
 \end{itemize}
 
 \section{\faHeartO\ Awards and Certificates}
-\datedline{An Image Retrieval System Based on Natural Language Captioning, \href{http://www.xjishu.com/zhuanli/55/201910738598_3.html}{CN Patent 201910738598 \faExternalLink\ }}{Aug. 2019}
-\datedline{$1^{st}$ Winner with 10,000-RMB Prize, BeyondSoft Tech Challenge on Motion Evaluation}{Nov. 2018}
-\datedline{National Scholarship for Academic Excellency, Chinese Ministry of Education}{Nov. 2017}
+\datedline{\href{http://www.xjishu.com/zhuanli/55/201910738598_3.html}{An Image Retrieval System Based on Natural Language Captioning, \textbf{CN Patent} \faExternalLink\ \textbf{patent-link}}}{Aug. 2019}
+{• Automatic image captioning upon uploading, used BLEU score as the key for retrieval, enabling descriptive search}\vspace{0.8mm}
+\datedline{\textbf{$1^{st}$-place Winner} with \textyen 10,000 ($\sim$\$1,500) Prize, BeyondSoft Tech Challenge on Motion Evaluation}{Nov. 2018}
+{•  Designed neural network to evaluate motion quality for athletes / rehabilitating patients on inertial data}\vspace{0.8mm}
+\datedline{\textbf{National Scholarship} for Academic Excellency, Chinese Ministry of Education}{Nov. 2017}
+{•  Top-level scholarship awarded nationally to recommended students for their academic excellency}{\vspace{0.8mm}}
 
 \section{\faDesktop\ Skills}
-Python, C/C++; Computer Vision with Deep Learning; SLAM; High-Efficiency Deep Neural Networks
+Python, C, C++, Bash; Pytorch, SciKits, Caffe, Caffe2, ONNX, OpenCV, OpenMVG
 
 \end{document}
