@@ -25,46 +25,67 @@
 
 \section{\faSuitcase\ Professional Experiences}
 
-\datedsubsection{\textbf{SenseBrain Technology LLC}}{San Jose, CA}
-\datedsubsection{\textit{Research Intern} | C++, Bash, Python}{May. 2020 - Aug. 2020}
+\datedsubsection{\textbf{Nuro Inc.}}{Mountain View, CA}
+\datedsubsection{\textit{Senior Software Engineer, Perception} | Python, C++}{Jun. 2024 - Present}
+Develop state-of-the-art perception models \& implement associated train/deploy infrasturcture
+\begin{itemize}
+  \item Perform in-training and post-training profiling to identify the latency/memory/tech-debt bottlenecks
+  \item Reduced \textbf{10\%} latency by re-modeling the anchor-based design with heatmap-based design and re-implementing corresponding custom dynamic ops with native static ops
+  \item For custom ops that can't be replaced, implemented their FP16 counterparts to achieve \textbf{2x speedup}
+  \item Optimized \textbf{20\%} memory with attention-based detection model to fully exploit the feature sparsity 
+  \item Re-developed detection model with basic tf/keras3/torch ops, meanwhile ensuring the whole model's numerical \& speed parity across backends, as part of the team effort to move away from tensorflow towards pytorch
+\end{itemize}
+
+\datedsubsection{\textit{Software Engineer, Perception} | Python, C++}{Jan. 2021 - Jun. 2024}
+Develop modernized perception modeling infrastructure
+\begin{itemize}
+  \item Developed keras-based \href{https://github.com/open-mmlab/mmdetection3d}{\underline{MMDet}}-like framework that \textbf{unified the modeling workflow for perception team}
+  \item Implemented unified TF-TRT custom operator API that supports automatic \href{https://docs.nvidia.com/deeplearning/tensorrt/operators/docs/PluginV2.html}{\underline{TensorRT}} export with \href{https://www.tensorflow.org/guide/create_op}{\underline{custom TF ops}}
+  \item Re-implemented the entire camera-lidar 3D detection workflow (from data generation, model training to final deployment) with frameworks above to showcase its better performance (\textbf{significantly improved APs} with joint temporal training) and debuggability (ultimately getting \textbf{5x higher hours per interruption} without NaN / OOM, etc.)
+\end{itemize}
+
+\datedsubsection{\textbf{SenseTime Co., Ltd.}}{Beijing, China \& San Jose, CA}
+\datedsubsection{\textit{Research Intern (San Jose Office)} | C++, Bash, Python}{May. 2020 - Aug. 2020}
 Compression and quantization of neural networks for camera-related CV tasks on smartphones
 \begin{itemize}
-  \item \textbf{50\%} channel-pruning compression of CNN to obtain fine-grained quad bayer captured by 2x2 on-chip lens (\href{https://www.sony-semicon.co.jp/e/products/IS/mobile/2_2_ocl.html}{\faExternalLink\ \textbf{product-link}}), enhanced the light-weight model (Python) for low-exposure frames with hard example fine-tuning
+  \item \textbf{50\%} channel-pruning compression of CNN to obtain fine-grained quad bayer captured by \href{https://www.sony-semicon.co.jp/e/products/IS/mobile/2_2_ocl.html}{\underline{2x2 on-chip lens}}), enhanced the light-weight model (Python) for low-exposure frames with hard example fine-tuning
   \item \textbf{5x speedup} of CNN for bayer demosaicking on Xiaomi phone's raw data, achieved by mixed-bitwidth (16-bit activation and 8-bit weight) quantization-aware training (Python) with AIMET toolbox
   \item Developed the deployment pipeline for CNN models on smartphones (C++ and bash scripts), verified the model performance on the \textbf{DSP/CPU} of an Oppo Reno 2 and a google Pixel 3 with SNPE toolchain
 \end{itemize}
-
-\datedsubsection{\textbf{SenseTime Co., Ltd.}}{Beijing, China}
-\datedsubsection{\textit{Research Intern} | C, C++, Python}{Feb. 2018 - Jul. 2019}
+\datedsubsection{\textit{Research Intern (Beijing Office)} | C, C++, Python}{Feb. 2018 - Jul. 2019}
 Performance optimization and pipeline automation for deep learning frameworks and packages
 \begin{itemize}
-  \item Developed pytorch-onnx-caffe conversion and profiling package (Python) supporting \textbf{all neural network layers}, effectively bridged the gap between research teams (training) and engineering teams (deployment) 
+  \item Developed \href{https://github.com/ModelTC/NART}{\underline{pytorch-onnx-caffe conversion and profiling package}} supporting \textbf{all neural network layers}, effectively bridged the gap between research teams (training) and engineering teams (deployment) 
   \item Designed easy-to-use, modularized APIs that successfully worked with models within a wide variety such as pedestrian re-ID, face verification, car detection, etc. (number of users soon \textbf{exceeded 300} since first release in a month)
   \item Implemented novel neural network layers (time-shift operation, correlation convolution, etc.) in Caffe (C++) with research teams, \textbf{halved the train-test-deploy response cycle of any new model} 
   \item Developed inference framework (C) optimized for x86 processors with MKL-DNN, \textbf{2x speedup} compared to regular Caffe, used as deployment framework on development boards and light-weight chips
-\end{itemize}
+\end{itemize} 
 
-\section{\faBook\ Academic Projects}
-\datedsubsection{\textbf{\href{https://mscvprojects.ri.cmu.edu/2020teamn/}{Image-Based Localization for Autonomous Drones \faExternalLink\ project-link}}}{Pittsburgh, PA}
-\datedsubsection{\textit{Carnegie Mellon University} | Supervised by Prof. John Galeotti}{Feb. 2020 - May. 2020}
-Develop stateless relocalization module to fight the drifting problem in long-range flights
+\datedsubsection{\textbf{Robotics Institute, Carnegie Mellon University}}{Pittsburgh, PA}
+\datedsubsection{\textit{Student Researcher, supervised by Prof. John Galeotti} | Python, C++}{Feb. 2020 - May. 2020}
+Develop \href{https://mscvprojects.ri.cmu.edu/2020teamn/}{\underline{stateless relocalization module}} to fight the drifting problem in long-range UAV flights 
 \begin{itemize}
   \item Implemented a fully convolutional neural network for scene coordinate regression, and applied \textbf{differentiable RANSAC with PnP algorithm} on scene coordinates for pose estimation
   \item Leveraged GPS and structure-from-known-motion with OpenMVG to obtain \textbf{high-quality ground truth} for training
   \item Averagely \textbf{<3m, <0.3° error} tested on 10-kilometer flight data, \textbf{<1m, <0.1° error} tested on 2-kilometer flight data
 \end{itemize}
 
-\datedsubsection{\textbf{\href{https://arxiv.org/abs/1811.09938}{Feature-Pyramid Siamese Network as Loop Closure Detector \faExternalLink\ arxiv-link}}}{Berkeley, CA}
-\datedsubsection{\textit{University of California, Berkeley} | Supervised by Dr. Allen Yang}{Jul. 2018 - Oct. 2018}
-Design loop closure detection module and improve localization module for the lost track problem in VR/AR scenarios
+\datedsubsection{\textbf{FHL Vive Center for Enhanced Reality, UC Berkeley}}{Berkeley, CA}
+\datedsubsection{\textit{Student Assistant III, supervised by Dr. Allen Yang} | Python, C++}{Jun. 2019 - Sept. 2019}
+Develop and review new features for \href{https://vivecenter.berkeley.edu/research1/openark/}{\underline{OpenARK}}
+\begin{itemize}
+  \item Implemented \textbf{ICP algorithm} for SLAM module, stabilized the trajectory on texture-sparse frames
+  \item Implemented a Caffe-based web demo for human face registration \& verification
+\end{itemize}
+\datedsubsection{\textit{Visiting Student Researcher, supervised by Dr. Allen Yang} | Python, C++}{Jul. 2018 - Oct. 2018}
+Design a \href{https://arxiv.org/abs/1811.09938}{\underline{loop closure detection module}} and improve localization module for the lost track problem in VR/AR scenarios
 \begin{itemize}
   \item Designed a \textbf{feature-pyramid siamese network} for loop closure detection w/ comparable performance to ORB-SLAM
   \item Synthesized a \textbf{large-scale} ($\sim$150,000 images) indoor environment dataset with Unity3D and SunCG for train \& test
-  \item Implemented \textbf{ICP algorithm} for OpenARK's SLAM module, stabilized the trajectory on texture-sparse frames
 \end{itemize}
 
 \section{\faHeartO\ Awards and Certificates}
-\datedline{\href{http://www.xjishu.com/zhuanli/55/201910738598_3.html}{An Image Retrieval System Based on Natural Language Captioning, \textbf{CN Patent} \faExternalLink\ \textbf{patent-link}}}{Aug. 2019}
+\datedline{An Image Retrieval System Based on Natural Language Captioning, \href{http://www.xjishu.com/zhuanli/55/201910738598_3.html}{\underline{CN Patent}}}{Aug. 2019}
 {• Automatic image captioning upon uploading, used BLEU score as the key for retrieval, enabling descriptive search}\vspace{0.8mm}
 \datedline{\textbf{$1^{st}$-place Winner} with \textyen 10,000 ($\sim$\$1,500) Prize, BeyondSoft Tech Challenge on Motion Evaluation}{Nov. 2018}
 {•  Designed neural network to evaluate motion quality for athletes / rehabilitating patients on inertial data}\vspace{0.8mm}
@@ -72,6 +93,6 @@ Design loop closure detection module and improve localization module for the los
 {•  Top-level scholarship awarded nationally to recommended students for their academic excellency}{\vspace{0.8mm}}
 
 \section{\faDesktop\ Skills}
-Python, C, C++, Bash; Pytorch, SciKits, Caffe, Caffe2, ONNX, OpenCV, OpenMVG
+Python, C, C++, Bash; Pytorch, Tensorflow, Keras, SciKits; TensorRT, ONNX, OpenCV, OpenMVG
 
 \end{document}
