@@ -29,10 +29,9 @@
 \datedsubsection{\textit{Senior Software Engineer, Perception} | Python, C++}{Jun. 2024 - Present}
 Develop state-of-the-art perception models \& implement associated train/deploy infrasturcture
 \begin{itemize}
-  \item Perform in-training and post-training profiling to identify the latency/memory/tech-debt bottlenecks
-  \item Reduced \textbf{10\%} latency by re-modeling the anchor-based design with heatmap-based design and re-implementing corresponding custom dynamic ops with native static ops
-  \item For custom ops that can't be replaced, implemented their FP16 counterparts to achieve \textbf{2x speedup}
-  \item Optimized \textbf{20\%} memory with attention-based detection model to fully exploit the feature sparsity 
+  \item Developed large-scale E2E model infrastructure for joint perception-behavior training-deploy-eval workflow
+  \item Performed in-training and post-training profiling to identify and resolve the latency/memory/tech-debt bottlenecks
+  \item Reduced \textbf{10\%} latency by re-modeling the anchor-based design with heatmap-based design
   \item Re-developed detection model with basic tf/keras3/torch ops, meanwhile ensuring the whole model's numerical \& speed parity across backends, as part of the team effort to move away from tensorflow towards pytorch
 \end{itemize}
 
